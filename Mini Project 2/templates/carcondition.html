@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Car Condition Evaluator</title>
+
+<head>
+    <style>
+        #output {
+            background-color: green;
+            width: 500px;
+            border: 10px solid black;
+            margin: 20px;
+            padding: 20px;
+            
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(90, 167, 219);">
+    <h1 style="color:black;text-align:center">Car Condition Evaluator</h1>
+    <img src="/static/images/logo.jpg" alt="moon" style="width:75px;height: 75px;margin-left: 650px;">
+    <form action="/process" method="POST" onkeydown="return event.key != 'Enter';">
+        <div style="width: 500px;border: 10px solid white;padding: 20px;margin: 20px;;background-color: black;color:white;">
+            <label for="name">Given Name</label>
+            <input type="text" name="name" size="50px" placeholder="name" autocomplete="off"><br><br>
+            
+            <input type="submit" value="Submit"><br><br>
+
+            <label for="buy_price">How expensive is the price of your car?:</label>
+
+            <select name="buy_price" id="buy_price">
+              <option value="low">Low</option>
+              <option value="med">Medium</option>
+              <option value="high">High</option>
+              <option value="vhigh">Very High</option>
+            </select><br><br>
+
+            <label for="maint_price">How hard is it to maintain your car?:</label>
+
+            <select name="maint_price" id="maint_price">
+              <option value="low">Low</option>
+              <option value="med">Medium</option>
+              <option value="high">High</option>
+              <option value="vhigh">Very High</option>
+            </select><br><br>
+
+            <label for="doors">How many doors does your car have?:</label>
+
+            <select name="doors" id="doors">
+              <option value="2">Two (2)</option>
+              <option value="3">Three (3)</option>
+              <option value="4">Four (4)</option>
+              <option value="5more">Five and more (5+)</option>
+            </select><br><br>
+            
+            
+            <label for="passengers">How many passengers can your car carry?:</label>
+
+            <select name="passengers" id="passengers">
+              <option value="2">Two (2)</option>
+              <option value="4">Four (4)</option>
+              <option value="more">More (4+)</option>
+            </select><br><br>
+
+
+            <label for="boot">How big is your car's trunk?:</label>
+
+            <select name="boot" id="boot">
+              <option value="small">Small</option>
+              <option value="med">Medium</option>
+              <option value="big">Big</option>
+            </select><br><br>
+
+            <label for="safety">What would you rate the safety of your car?:</label>
+
+            <select name="safety" id="safety">
+              <option value="low">Low</option>
+              <option value="med">Medium</option>
+              <option value="high">High</option>
+            </select><br>            
+
+        </div>
+        <div id="output">
+            {{data}}
+        </div>
+    </form>
+
+</body>
+
+</html>
